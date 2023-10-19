@@ -33,8 +33,9 @@ class Student extends Model
     {
         return $this->hasMany(Student::class);
     }
-    public function course():BelongsTo
+
+    public function course(): BelongsTo
     {
-        return $this->belongsTo(Course::class);
+        return $this->belongsTo(Course::class, 'CourseID', 'CourseID');
     }
 }

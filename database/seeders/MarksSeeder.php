@@ -31,6 +31,7 @@ class MarksSeeder extends Seeder
                         Mark::create([
                             'subject_id' => $subject->id,
                             'student_prn' => $student->PRN,
+                            'course_id' => $course->id,
                             'semester_id' => $semester->id,
                             'marks_received' => rand(40, 100),
                             'total_marks' => 100,
